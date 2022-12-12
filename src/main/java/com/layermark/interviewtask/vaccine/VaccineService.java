@@ -32,7 +32,9 @@ public class VaccineService {
         this.vaccineRepository = vaccineRepository;
     }
 
-    public List<Vaccine> getVaccines() { return vaccineRepository.findAll(); }
+    public List<Vaccine> getVaccines() {
+        return vaccineRepository.findAll();
+    }
 
     public void addNewVaccine(Vaccine vaccine) {
         Optional<Vaccine> vaccineOptional = vaccineRepository.findVaccineByName(vaccine.getName());

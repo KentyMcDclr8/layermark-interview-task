@@ -44,7 +44,7 @@ public class Vaccine {
     @JoinTable(
             name = "patient_vaccinated",
             joinColumns = @JoinColumn(name = "vaccine_id"),
-            inverseJoinColumns = @JoinColumn(name = "student_id")
+            inverseJoinColumns = @JoinColumn(name = "patient_id")
     )
     private Set<Patient> patients = new HashSet<>();
 

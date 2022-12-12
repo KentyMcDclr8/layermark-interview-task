@@ -10,6 +10,10 @@ import java.time.Period;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * This class defines the Patient entity (object) and all of its attributes (properties) and its relations and methods
+ */
+
 @Entity(name = "Patient")
 @Table(
         name = "patient",

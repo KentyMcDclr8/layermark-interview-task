@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * This class defines a controller layer for the API, dealing with mapping inputs and outputs between the service layer and the application
+ */
+
 @RestController
 @RequestMapping("task/api/doctor")
 public class DoctorController {

@@ -12,6 +12,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+/**
+ * This class defines a service layer for the API, dealing with the required business logic and the inputs from the controller layer
+ */
+
 @Service
 public class VaccineService {
 

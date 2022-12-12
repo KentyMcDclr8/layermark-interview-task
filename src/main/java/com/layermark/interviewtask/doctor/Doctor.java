@@ -8,6 +8,10 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * This class defines the Doctor entity (object) and all of its attributes (properties) and its relations and methods
+ */
+
 @Entity(name = "Doctor")
 @Table(
         name = "doctor",

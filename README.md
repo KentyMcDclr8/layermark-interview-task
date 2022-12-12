@@ -6,8 +6,13 @@ Imagine a clinic that specialises in providing vaccines for people. A very naive
 
 patient(id, name, email, birthDate, doctor_id) _id primary key, doctor_id foreign key references doctor_<br />
 doctor(id, name, email) _id primary key_<br />
-vaccine(id, name) _id primary key_<br />
+vaccine(id, name, doctor_id) _id primary key, doctor_id foreign key references doctor_<br />
 patient_vaccinated = (patient_id, vaccine_id) _patient_id foreign key references patient, vaccine_id foreign key references vaccine_
+
+The list of relationships in the API is provided below:<br />
+- Patient -> Doctor (ManyToOne) resolved on the many side (patient) by adding the primary key of the one side (doctor)<br />
+- Vaccine -> Doctor (ManyToOne) resolved on the many side (vaccine) by adding the primary key of the one side (doctor)<br />
+- Patient -- Vaccine (ManyToMany) resolved by creating an extra table (patient_vaccinated)
 
 The API firstly creates the required tables. It then provides all the following functionalities:<br />
 - delete mapping to add the functionality to delete tables<br />
